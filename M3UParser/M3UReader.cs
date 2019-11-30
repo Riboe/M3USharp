@@ -40,7 +40,7 @@ namespace M3USharp
                 {
                     SetTagValue(result, tag, line);
                 }
-                else if (TAG_STREAM_INFO.Equals(previousLine))
+                else if (previousLine != null && previousLine.StartsWith(TAG_STREAM_INFO))
                 {
                     result.Streams[result.Streams.Count - 1].Path = line;
                 }
@@ -59,9 +59,9 @@ namespace M3USharp
             string currentStreamTag = null;
 
             string data = line.Substring(tag.Length);
-            for (int i = 0; i < data.Length; i++)
+            for (int i = 0; i <= data.Length; i++)
             {
-                char c = data[i];
+                char? c = i < data.Length ? data[i] : (char?) null;
 
                 if (c == '"')
                 {
@@ -72,7 +72,7 @@ namespace M3USharp
                     currentStreamTag = builder.ToString();
                     builder.Clear();
                 }
-                else if (c == ',' && quoteCount % 2 == 0)
+                else if ((c == ',' && quoteCount % 2 == 0) || c == null)
                 {
                     string value = builder.ToString();
                     builder.Clear();
@@ -111,7 +111,7 @@ namespace M3USharp
         /// </summary>
         private static void SetTagValue(M3UFile file, string tag, string line)
         {
-            string value = tag.Substring(tag.Length);
+            string value = line.Substring(tag.Length);
             switch (tag)
             {
                 case TAG_VERSION:
