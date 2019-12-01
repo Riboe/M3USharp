@@ -9,11 +9,12 @@
     <Company />
     <PackageTags>m3u m3u8 hls</PackageTags>
     <PackageReleaseNotes>Initial release.</PackageReleaseNotes>
-    <RepositoryUrl></RepositoryUrl>
-    <RepositoryType></RepositoryType>
-    <PackageProjectUrl></PackageProjectUrl>
+    <RepositoryUrl>https://github.com/Riboe/M3USharp</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageProjectUrl>https://github.com/Riboe/M3USharp</PackageProjectUrl>
     <Description>A simple library for reading .m3u and .m3u8 files.</Description>
     <Version>0.0.1</Version>
+    <PackageLicenseExpression>MIT License</PackageLicenseExpression>
   </PropertyGroup>
 
 </Project>
