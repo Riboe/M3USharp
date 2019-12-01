@@ -1,10 +1,19 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <AssemblyName>M3USharp</AssemblyName>
     <RootNamespace>M3USharp</RootNamespace>
     <LangVersion>8</LangVersion>
+    <Authors>Frederik Riboe Olsen</Authors>
+    <Company />
+    <PackageTags>m3u m3u8 hls</PackageTags>
+    <PackageReleaseNotes>Initial release.</PackageReleaseNotes>
+    <RepositoryUrl></RepositoryUrl>
+    <RepositoryType></RepositoryType>
+    <PackageProjectUrl></PackageProjectUrl>
+    <Description>A simple library for reading .m3u and .m3u8 files.</Description>
+    <Version>0.0.1</Version>
   </PropertyGroup>
 
 </Project>
